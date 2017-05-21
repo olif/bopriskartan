@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Prisutveckling {{ name }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9pLPHeLIyzHwg9XnAe7YzV7ywhOTJHco"></script>
+    <script id="bucket-template" type="x-template">
+      <span class="color-box"></span>
+      <span class="color-text"></span>
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var prefix = '{{ name }}/';
+      var sw = new google.maps.LatLng({{ lat_lo }}, {{ lng_lo }});
+      var ne = new google.maps.LatLng({{ lat_hi }}, {{ lng_hi }});
+      var center = {lat: {{ lat_center}}, lng: {{ lng_center }} };
+      var zoom = {{ zoom }};
+      var images = {{ dates }};
+      var buckets = {{ buckets }};
+    </script>
+    <script src="../script.js"></script>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-98320818-1', 'auto');
+     ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
