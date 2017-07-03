@@ -21,9 +21,9 @@ type dataConfig struct {
 	HeatmapWidth  int     `yaml:"heatmap_width"`
 	HeatmapHeight int     `yaml:"heatmap_height"`
 	LatLo         float64 `yaml:"lat_lo"`
-	LonLo         float64 `yaml:"lng_lo"`
+	LonLo         float64 `yaml:"lon_lo"`
 	LatHi         float64 `yaml:"lat_hi"`
-	LonHi         float64 `yaml:"lng_hi"`
+	LonHi         float64 `yaml:"lon_hi"`
 	MinPriceLimit float64 `yaml:"min_price_limit"`
 	MaxPriceLimit float64 `yaml:"max_price_limit"`
 	HeatmapStep   float64 `yaml:"heatmap_step"`
