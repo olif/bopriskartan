@@ -47,6 +47,7 @@ def main():
         autoescape=select_autoescape(['html']))
 
     config['buckets'] = buckets
+    file_paths.sort()
     config['dates'] = file_paths
     template = env.get_template(os.path.basename(args.template_path))
 

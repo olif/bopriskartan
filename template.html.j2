@@ -16,12 +16,19 @@
     <div id="map"></div>
     <script>
       var prefix = '{{ name }}/';
-      var sw = new google.maps.LatLng({{ lat_lo }}, {{ lng_lo }});
-      var ne = new google.maps.LatLng({{ lat_hi }}, {{ lng_hi }});
+      var sw = new google.maps.LatLng({{ lat_lo }}, {{ lon_lo }});
+      var ne = new google.maps.LatLng({{ lat_hi }}, {{ lon_hi }});
       var center = {lat: {{ lat_center}}, lng: {{ lng_center }} };
       var zoom = {{ zoom }};
       var images = {{ dates }};
       var buckets = {{ buckets }};
+
+      var fileNameToLabel = function(text) {
+        var base = new String(text).substring(text.lastIndexOf('/') + 1);
+        if(base.lastIndexOf(".") != -1)
+          base = base.substring(0, base.lastIndexOf("."));
+        return base;
+      };
     </script>
     <script src="../script.js"></script>
     <script>
